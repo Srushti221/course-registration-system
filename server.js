@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // MongoDB Connection
-mongoose.connect("mongodb+srv://srushtibandi22_db_user:7337728790@cluster0.hpf6ozj.mongodb.net/student-course-registration?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGO_URI || "mongodb+srv://srushtibandi22_db_user:7337728790@cluster0.hpf6ozj.mongodb.net/student-course-registration?retryWrites=true&w=majority");
 
 const db = mongoose.connection;
 
